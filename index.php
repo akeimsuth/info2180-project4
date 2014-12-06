@@ -1,3 +1,6 @@
+<?php session_start(); 
+include "auth.php";
+include "load.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +11,7 @@
     <title>Cheapo Mail</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    
+    <script type="text/javascript" src="js/load.js"></script>
 </head>
 <body>
     <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
@@ -24,14 +27,13 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-              
-                    <li><a href="login.php">Login</a></li>
-                
+                  <li><a href="<?php echo $_SESSION['index'];?>"><?php echo $_SESSION['login'];?></a></li>
+               <li><a href="register.php"><?php echo $_SESSION['register'];?></a></li>
                 </ul>
             </div>
         </div>
     </header>
-
+<p><?php echo $_SESSION['username'];?></p>
     <section id="title" class="emerald">
         <div class="container">
             <div class="row">
@@ -39,11 +41,17 @@
                     <h1>Home Page</h1>
                    <p>This is a site built to send and receive messages between its members</p>
                 </div>
+                <a href="mail.php">click here to Compose a message</a>
             </div>
         </div>
+        <div><?php echo $create;?></h2>
     </section>
 
-    <section id="bottom" class="wet-asphalt">
+    <section id="registration" class="container">
+    	<div id="result"></div>
+    	<script type="text/javascript">
+    		response();
+    	</script>
        </section>
 
     <footer id="footer" class="midnight-blue">

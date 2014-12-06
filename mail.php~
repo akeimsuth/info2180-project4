@@ -50,7 +50,7 @@ include "message.php";?>
         </div>
     </section><!--/#title-->     
     <section id="registration" class="container">  
-   	<?php echo $create;?>
+   	<?php echo "<h1>$create</h1>" ?>
    	      <form class="center" role="form" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
             <fieldset class="registration-form">
                  <div class="form-group">

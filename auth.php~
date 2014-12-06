@@ -12,7 +12,7 @@ function Redirect($url, $permanent = false)
 session_start();
 $status=$st="";
 	
-$_SESSION['username']="";
+$_SESSION['username']=$_REQUEST['username'];
 $_SESSION['login']="login";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_SESSION['username']=$_REQUEST['username'];
