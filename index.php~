@@ -44,7 +44,7 @@ include "load.php"?>
                 <a href="mail.php">click here to Compose a message</a>
             </div>
         </div>
-        <div id="flash"><?php echo $create;?></h2>
+        <div><?php echo $create;?></h2>
     </section>
 
     <section id="registration" class="container">

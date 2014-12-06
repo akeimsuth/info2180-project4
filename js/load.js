@@ -16,3 +16,4 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("GET","load.php",true);
 xmlhttp.send();
 }
+response();

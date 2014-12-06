@@ -49,9 +49,6 @@ include "load.php"?>
 
     <section id="registration" class="container">
     	<div id="result"></div>
-    	<script type="text/javascript">
-    		response();
-    	</script>
        </section>
 
     <footer id="footer" class="midnight-blue">

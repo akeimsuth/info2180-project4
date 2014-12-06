@@ -13,8 +13,8 @@ $create="New Message";
 # loop through each message
 while ($row = mysql_fetch_array($results)) {
   ?>
-  <li id="load"> <?php echo $row["subject"]; ?></li>
-  <li id="load"> <?php echo $row["body"]; ?></li>
+  <li id="load">subject: <?php echo $row["subject"]; ?></li>
+  <li id="load">body: <?php echo $row["body"]; ?></li>
   <?php
 }
 ?>
