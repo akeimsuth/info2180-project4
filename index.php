@@ -33,7 +33,6 @@ include "load.php"?>
             </div>
         </div>
     </header>
-<p><?php echo $_SESSION['username'];?></p>
     <section id="title" class="emerald">
         <div class="container">
             <div class="row">
@@ -48,8 +47,10 @@ include "load.php"?>
     </section>
 
     <section id="registration" class="container">
-    	<div id="result"></div>
-       </section>
+	    <form class="center">
+	    		<div id="result"></div>
+	    </form>
+    </section>
 
     <footer id="footer" class="midnight-blue">
         <div class="container">

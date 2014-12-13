@@ -1,3 +1,4 @@
+<html>
 <?php
 session_start();
 mysql_connect(
@@ -5,17 +6,18 @@ mysql_connect(
 "root",
 "bear123"
 );
+$create="";
 mysql_select_db("Cheapo");
 # execute a SQL query on the database
 $results = mysql_query("SELECT * FROM Message");
-echo $results;
-$create="New Message";
 # loop through each message
-while ($row = mysql_fetch_array($results)) {
+$row = mysql_fetch_array($results);
+while ($row) {
   ?>
-  <li id="load"> <?php echo $row["subject"]; ?></li>
-  <li id="load"> <?php echo $row["body"]; ?></li>
+  <div class="alert alert-success" id="load">subject: <?php echo $row["subject"]; ?>
+<br/>body: <?php echo $row["body"]; ?></div>
   <?php
 }
 ?>
+</html>
 

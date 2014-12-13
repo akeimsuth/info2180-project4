@@ -1,10 +1,5 @@
 function response()
 {
-if (str.length==0)
-  { 
-  document.getElementById("result").innerHTML="";
-  return;
-  }
 var xmlhttp=new XMLHttpRequest();
 xmlhttp.onreadystatechange=function()
   {
@@ -16,4 +11,5 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("GET","load.php",true);
 xmlhttp.send();
 }
-response();
+setInterval(function(){response()},500);
+

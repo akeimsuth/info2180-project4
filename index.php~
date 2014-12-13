@@ -33,26 +33,21 @@ include "load.php"?>
             </div>
         </div>
     </header>
-<p><?php echo $_SESSION['username'];?></p>
-    <section id="title" class="emerald">
-        <div class="container">
-            <div class="row">
+   
                 <div class="col-sm-6">
                     <h1>Home Page</h1>
                    <p>This is a site built to send and receive messages between its members</p>
                 </div>
                 <a href="mail.php">click here to Compose a message</a>
-            </div>
-        </div>
+   
         <div><?php echo $create;?></h2>
     </section>
 
     <section id="registration" class="container">
-    	<div id="result"></div>
-    	<script type="text/javascript">
-    		response();
-    	</script>
-       </section>
+	    <form class="center">
+	    		<div id="result"></div>
+	    </form>
+    </section>
 
     <footer id="footer" class="midnight-blue">
         <div class="container">

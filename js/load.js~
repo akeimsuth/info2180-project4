@@ -1,10 +1,5 @@
 function response()
 {
-if (str.length==0)
-  { 
-  document.getElementById("result").innerHTML="";
-  return;
-  }
 var xmlhttp=new XMLHttpRequest();
 xmlhttp.onreadystatechange=function()
   {
@@ -15,4 +10,11 @@ xmlhttp.onreadystatechange=function()
   }
 xmlhttp.open("GET","load.php",true);
 xmlhttp.send();
+}
+setInterval(function(){response()},500);
+setInterval(function () {myTimer()}, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
 }
